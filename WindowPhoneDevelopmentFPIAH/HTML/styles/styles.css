@@ -1,0 +1,217 @@
+
+/* Adapted from http://www.thecssninja.com/css/css-tree-menu */
+
+ol.tree
+{
+	padding: 0 0 0 30px;
+	width: 300px;
+}
+	ol.tree li 
+	{ 
+		position: relative; 
+		margin-left: -15px;
+        margin-bottom: 0px;
+		list-style: none;
+	}
+	ol.tree li.file
+	{
+		margin-left: -1px !important;
+	}
+		ol.tree li.file span
+		{
+			background: url(../images/filetree/document.png) 0 0 no-repeat;
+			padding-left: 21px;
+			text-decoration: none;
+			display: block;
+		}
+		ol.tree li.file a[href *= '.pdf']	{ background: url(../images/filetree/document.png) 0 0 no-repeat; }
+		ol.tree li.file a[href *= '.html']	{ background: url(../images/filetree/document.png) 0 0 no-repeat; }
+		ol.tree li.file a[href $= '.css']	{ background: url(../images/filetree/document.png) 0 0 no-repeat; }
+		ol.tree li.file a[href $= '.js']		{ background: url(../images/filetree/document.png) 0 0 no-repeat; }
+	ol.tree li input
+	{
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		opacity: 0;
+		z-index: 2;
+		cursor: pointer;
+		height: 1em;
+		width: 1em;
+		top: 0;
+	}
+		ol.tree li input + ol
+		{
+			background: url(../images/filetree/toggle-small-expand.png) 40px 0 no-repeat;
+			margin: -0.938em 0 0 -44px; /* 15px */
+			height: 1em;
+		}
+		ol.tree li input + ol > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+	ol.tree li label.folder
+	{
+		background: url(../images/filetree/folder-horizontal.png) 15px 1px no-repeat;
+		cursor: pointer;
+		display: block;
+		padding-left: 37px;
+	}
+	ol.tree li label.xaml
+	{
+		background: url(../images/filetree/document.png) 15px 1px no-repeat;
+		cursor: pointer;
+		display: block;
+		padding-left: 37px;
+	}
+
+	ol.tree li input:checked + ol
+	{
+		background: url(../images/filetree/toggle-small.png) 40px 5px no-repeat;
+		margin: -1.25em 0 0 -44px; /* 20px */
+		padding: 1.563em 0 0 80px;
+		height: auto;
+	}
+		ol.tree li input:checked + ol > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+		ol.tree li input:checked + ol > li:last-child { margin: 0 0 0.063em; /* 1px */ }
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}
+html.narrow{-ms-text-size-adjust:none;-webkit-text-size-adjust:none}html.narrow body{font-size:100%;padding:0;margin:0;font-family:"Segoe WP", "Helvetica", sans-serif}html.narrow h1,html.narrow h2,html.narrow h3,html.narrow p,html.narrow ul{margin:0 0 12px 0}html.narrow ul li{list-style-type:none;background-image:url(../images/bullet.png);background-repeat:no-repeat;background-position:left top;padding-left:10px}html.narrow h1{font-weight:normal;font-family:"Segoe WP", "Helvetica", sans-serif;font-size:150%;margin:0 5px 15px 15px;padding:0 0 30px 0}html.narrow h2{font-weight:normal;font-size:140%}html.narrow h3{font-weight:normal;font-size:120%}html.narrow img{border:0}html.narrow code{font-family:Consolas, Monaco, Monospace}html.narrow pre{margin-top:5px;margin-bottom:5px}html.narrow pre code{font-size:80%}html.narrow ul li{margin-bottom:10px}html.narrow ul.linklist > li{list-style-type:disc}html.narrow ul.compact > li{margin-bottom:0}html.narrow .apphide{display:none}html.narrow div#mainbody{margin:0 30px 0 5px}html.narrow ul#nav{list-style-type:none;margin:0;padding:0;height:2.3em}html.narrow ul#nav li{margin:0;padding:0 10px 0 0;float:left}html.narrow ul#nav li a{text-decoration:none;color:#fff;padding:20px 30px;margin:0 0 0 0}html.narrow dt{font-weight:bold}html.narrow dd{margin-left:10px}html.narrow table{border-spacing:0;margin:0 0 10px 10px}html.narrow table caption{font-style:italic}html.narrow table tr:first-child th{border-top:2px solid #000;border-bottom:1px solid #000}html.narrow table tr:last-child td{border-bottom:2px solid #000}html.narrow table td,html.narrow table th{padding-left:1em}html.narrow table th{font-weight:normal;text-align:center}html.narrow a.glossaryterm{text-decoration:none;border-bottom:2px dotted #999;color:#000}html.narrow div.figure{margin:15px 0 0 0}html.narrow div.listimg{margin:15px 0 0 0}html.narrow div#header{color:#fff}html.narrow div#home-btn-img-container{float:left;width:50px;height:50px}html.narrow div#home-btn-txt-container{float:left;width:250px;margin-left:5px}html.narrow div#home-btn{margin:30px 0 10px 5px;padding:30px 0 0 0;overflow:auto}html.narrow div#home-btn a{text-decoration:none;color:#fff;font-size:110%}html.narrow div#home-btn img{width:50px;height:50px}html.narrow div#footer{font-size:150%}html.narrow div#footer img{width:50px;height:50px}html.narrow div#backfooter{float:left;margin-left:5px;margin-bottom:5px;margin-top:30px}html.narrow div#nextfooter{float:right;margin-right:5px;margin-bottom:5px;margin-top:30px}
+html.wide body{padding:0;margin:0;font-family:"Segoe UI", "Helvetica", sans-serif}html.wide h1,html.wide h2,html.wide h3,html.wide p,html.wide ul{margin:0 0 12px 0}html.wide ul li{list-style-type:disc;margin-left:35px}html.wide h1{font-weight:normal;font-family:"Segoe UI Light", "Helvetica", sans-serif;font-size:300%;margin:0 65px 15px 100px;padding:0 0 30px 0}html.wide h2{font-weight:normal;font-size:150%}html.wide h3{font-weight:normal;font-size:130%}html.wide img{border:0}html.wide code{font-family:Consolas, Monaco, Monospace}html.wide pre{margin-top:5px;margin-bottom:5px}html.wide pre code{font-size:80%}html.wide li{margin-bottom:10px}html.wide ul.compact > li,html.wide ul.linklist > li{margin-bottom:0;list-style-type:disc}html.wide div#mainbody{margin:0 65px 0 65px}html.wide ul#nav{list-style-type:none;margin:0;padding:0;height:2.3em}html.wide ul#nav li{margin:0;padding:0 10px 0 0;float:left}html.wide ul#nav li a{text-decoration:none;color:#fff;padding:20px 30px;margin:0 0 0 0}html.wide dt{font-weight:bold}html.wide dd{margin-left:35px}html.wide table{border-spacing:0;margin:0 0 10px 45px}html.wide table caption{font-style:italic}html.wide table tr:first-child th{border-top:2px solid #000;border-bottom:1px solid #000}html.wide table tr:last-child td{border-bottom:2px solid #000}html.wide table td,html.wide table th{padding-left:1em}html.wide table th{font-weight:normal;text-align:center}html.wide a.glossaryterm{text-decoration:none;border-bottom:1px dotted #999;color:#000}html.wide div.figure{width:50%;margin:30px auto}html.wide div.listimg{margin:15px 0 0 0}html.wide div#header{color:#fff}html.wide div#home-btn{margin:30px 65px 0 65px;padding:30px 0 0 0;vertical-align:middle}html.wide div#home-btn a{text-decoration:none;color:#fff;font-size:150%;margin-bottom:30px}html.wide div#footer{font-size:150%}html.wide div#backfooter{float:left;margin-left:65px;margin-bottom:65px;margin-top:30px}html.wide div#nextfooter{float:right;margin-right:65px;margin-bottom:65px;margin-top:30px}
+/*
+YUI 3.7.3 (build 5687)
+Copyright 2012 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+/* From YUIs cssreset */
+
+html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit}input,textarea,select{*font-size:100%}legend{color:#000}#yui3-css-stamp.cssreset{display:none}
+
+/* Adapted from YUIs cssfont-min */
+
+/* body{font:13px/1.231 "Segoe UI", "Helvetica",clean,sans-serif;*font-size:small;*font:x-small}select,input,button,textarea{font:99% "Segoe UI", "Helvetica",clean,sans-serif}table{font-size:inherit;font:100%}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%}#yui3-css-stamp.cssfonts{display:none} */
+

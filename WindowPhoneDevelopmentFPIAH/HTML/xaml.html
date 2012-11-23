@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="narrow">
+ <head>
+  <title>
+    
+   XAML - Windows Phone Development For People In a Hurry
+
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="js/highlight.pack.js">
+  </script>
+  <script>
+hljs.initHighlightingOnLoad();
+
+// function fragNav(frag) {
+//     window.location.replace(frag);
+// }
+// function fragNav() {
+//     var els = document.URL.split("#");
+//     if (els.length == 1) {
+//         return;
+//     }
+//     var newurl = '#' + els[els.length - 1];
+//     window.location.replace(newurl);
+// }
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <style type="text/css">
+
+div#header {
+    background: #A2C139;
+}
+div#footer a {
+  color: #A2C139;
+  text-decoration: none;
+}
+html.narrow code {
+    font-size: 90%;
+}
+
+  </style>
+ </head>
+ <body>
+
+
+  <div id="header">
+
+   <div id="home-btn">
+
+    <a href="index.html">
+    <div id="home-btn-img-container">
+      <img alt="Main page" src="images/back_arrow_white.png" />
+    </div>
+    <div id="home-btn-txt-container">
+      Windows Phone Development for People in a Hurry
+    </div>
+    </a>
+
+   </div>
+
+   <h1>
+
+    XAML for People in a Hurry
+
+   </h1>
+
+  </div>
+
+
+  <div id="mainbody">
+
+
+
+  <h2>XAML c.f. HTML</h2>
+
+   <p>
+    XAML is an XML dialect.  If you are familiar with HTML there are really only a couple of things in XAML which may not be immediately obvious
+   </p>
+   <ul>
+    <li>
+     The many lines of code at the top of the file are XML namespace declarations e.g.
+     <code>
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+     </code>
+     puts all the elements and attributes defined in the XML schema at the URL under the
+     <code>
+      d
+     </code>
+     namespace
+    </li>
+    <li>
+     Elements and attributes prefixed by e.g.
+     <code>
+      d:
+     </code>
+     are defined under the
+     <code>
+      d
+     </code>
+     namespace
+    </li>
+    <li>
+     Any XAML attribute can be bound to a C# object using the
+     <a href="binding.html#binding">
+      Binding sytax
+     </a>
+     . This is the code inside the curly braces inside the strings. e.g.
+     <code>
+      &lt;TextBlock Text="{Binding Name}" /&gt;
+     </code>
+    </li>
+    <li>
+      Some attributes and elements have a period in their name e.g. <code>Grid.Row=&quot;1&quot;</code>. These are only valid when the parent is a particular element, in this case a <code>Grid</code> element
+    </li>
+   </ul>
+   <h2>
+    Code-behind file
+   </h2>
+   <ul>
+    <li>
+     When a XAML page file is created, a corresponding
+     <code>
+      .cs
+     </code>
+     or
+     <code>
+      .vb
+     </code>
+     file is also created. This is the 'code-behind file'
+    </li>
+    <li>
+     The class defined in the code behind is defined with a
+     <code>
+      partial
+     </code>
+     keyword which means the class is defined in more than one file
+    </li>
+    <li>
+     This other file (ending in
+     <code>
+      .g.i.cs
+     </code>
+     or
+     <code>
+      .g.cs
+     </code>
+     or the VB equivalents) is automatically generated from XAML and contains the
+     <code>
+      InitializeComponent
+     </code>
+     method called in the constructor
+    </li>
+    <li>
+     The debugger occasionally stops in these files, this almost always means there is an error in the XAML (usually a wrong attribute reference)
+    </li>
+    <li>
+     All the XAML elements are available in the code-behind file as a C#/VB object under the
+     <code>
+      this
+     </code>
+     namespace. If the object is not available try building the project (Ctrl+Shift+B) so the
+     <code>
+      .g.cs
+     </code>
+     files are generated
+    </li>
+   </ul>
+
+  <h2>Layout elements (StackPanel, Grid, Canvas)</h2>
+
+  <ul>
+  <li>Most XAML element are self explanatory, however the layout elements are not immediately obvious</li>
+  </ul>
+
+  <h3>Default</h3>
+
+  <ul>
+    <li>The default layout places elements on top of each other in the top left e.g.
+    <div class="listimg"><img src="images/layout_default.png" /></div>
+    </li>
+  </ul>
+
+  <h3>StackPanel</h3>
+
+  <ul>
+    <li>
+      <code>StackPanel</code> elements stack child elements either horizontally or vertically depending on the <code>Orientation</code> attribute,
+      <div class="listimg"><img src="images/layout_stackpanel.png" /></div>
+    </li>
+  </ul>
+
+  <h3>Grid</h3>
+
+  <ul>
+    <li>
+      <code>Grid</code> element defines a table-like structure to contain child elements
+    </li>
+    <li>
+      Unlike HTML tables, the child elements specify the cell they belong to using the <code>Grid.Row</code> and <code>Grid.Column</code> attributes
+      <div class="listimg"><img src="images/layout_grid.png" /></div>
+    </li>
+  </ul>
+
+  <h3>Canvas</h3>
+
+  <ul>
+    <li>
+      <code>Canvas</code> element allow for positioning of elements using absolute co-ordinates relative to the canvas
+    </li>
+    <li>
+      Child elements do not have to be within the canvas region and negative positions can be specified
+    </li>
+    <li>
+       Child elements use the <code>Canvas.Top</code>, <code>Canvas.Bottom</code>, <code>Canvas.Right</code> and <code>Canvas.Left</code> attributes to specify position
+      <div class="listimg"><img src="images/layout_canvas.png" /></div>
+    </li>
+  </ul>
+
+
+
+  </div>
+
+
+  <div id="footer">
+
+    <div id="backfooter">
+      <a href="design.html"><img alt="Previous page" src="images/back_arrow_olive.png" /> <span>Back</span></a>
+    </div>
+
+
+    <div id="nextfooter">
+      <a href="csharp.html"><span>Next</span> <img alt="Next page" src="images/next_arrow_olive.png" /></a>
+    </div>
+
+  </div>
+
+
+ </body>
+</html>

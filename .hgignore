@@ -1,0 +1,4 @@
+glob:*.swp
+glob:*.suo
+glob:WindowPhoneDevelopmentFPIAH/Bin/*
+glob:WindowPhoneDevelopmentFPIAH/obj/*

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2993"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Marketplace_Device_173x173.png"
+   inkscape:export-xdpi="112.1608"
+   inkscape:export-ydpi="112.1608"
+   sodipodi:docname="AppIcon.svg">
+  <defs
+     id="defs2995" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="43.136268"
+     inkscape:cy="819.50964"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="738"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata2998">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#292929;stroke:#ffffff;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       id="rect3003"
+       width="47.739166"
+       height="47.739166"
+       x="28.324944"
+       y="83.790649"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\ApplicationIcon.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.77889442px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="31.502296"
+       y="102.46561"
+       id="text3773"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\ApplicationIcon.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608"><tspan
+         sodipodi:role="line"
+         id="tspan3775"
+         x="31.502296"
+         y="102.46561"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+    <rect
+       style="fill:#292929;stroke:#ffffff;stroke-width:5.59015751000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;fill-opacity:1"
+       id="rect3003-7"
+       width="133.43472"
+       height="133.43472"
+       x="123.99693"
+       y="15.644819"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Application_TileImage_173x173.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608" />
+    <text
+       xml:space="preserve"
+       style="font-size:44.1032486px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="132.87787"
+       y="62.514862"
+       id="text3773-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Application_TileImage_173x173.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608"><tspan
+         sodipodi:role="line"
+         id="tspan3775-0"
+         x="132.87787"
+         y="62.514862"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+    <rect
+       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:5.59015751;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3003-7-0"
+       width="133.43472"
+       height="133.43472"
+       x="338.35379"
+       y="-3.2945185"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Marketplace_Device_173x173.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608" />
+    <text
+       xml:space="preserve"
+       style="font-size:44.1032486px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="347.23474"
+       y="41.575531"
+       id="text3773-4-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Marketplace_Device_173x173.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608"><tspan
+         sodipodi:role="line"
+         id="tspan3775-0-7"
+         x="347.23474"
+         y="41.575531"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+    <rect
+       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:3.19369578;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3003-7-0-6"
+       width="76.232185"
+       height="76.232185"
+       x="106.86112"
+       y="306.63422"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Marketplace_Device_99x99.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.19649315px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.59684789;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="111.93487"
+       y="335.97336"
+       id="text3773-4-9-0"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Marketplace_Device_99x99.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608"><tspan
+         sodipodi:role="line"
+         id="tspan3775-0-7-1"
+         x="111.93487"
+         y="335.97336"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:1.59684789;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+    <rect
+       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:5.59015751;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3003-7-5"
+       width="133.43472"
+       height="133.43472"
+       x="333.30304"
+       y="208.83752"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608" />
+    <text
+       xml:space="preserve"
+       style="font-size:44.1032486px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="342.18399"
+       y="255.70757"
+       id="text3773-4-4"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-ydpi="112.1608"><tspan
+         sodipodi:role="line"
+         id="tspan3775-0-1"
+         x="342.18399"
+         y="255.70757"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+  </g>
+</svg>

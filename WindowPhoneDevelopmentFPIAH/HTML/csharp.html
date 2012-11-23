@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="narrow">
+ <head>
+  <title>
+    
+   C# - Windows Phone Development For People In a Hurry
+
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="js/highlight.pack.js">
+  </script>
+  <script>
+hljs.initHighlightingOnLoad();
+
+// function fragNav(frag) {
+//     window.location.replace(frag);
+// }
+// function fragNav() {
+//     var els = document.URL.split("#");
+//     if (els.length == 1) {
+//         return;
+//     }
+//     var newurl = '#' + els[els.length - 1];
+//     window.location.replace(newurl);
+// }
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <style type="text/css">
+
+div#header {
+    background: #00ABA9;
+}
+div#footer a {
+  color: #00ABA9;
+  text-decoration: none;
+}
+html.narrow code {
+    font-size: 90%;
+}
+
+  </style>
+ </head>
+ <body>
+
+
+  <div id="header">
+
+   <div id="home-btn">
+
+    <a href="index.html">
+    <div id="home-btn-img-container">
+      <img alt="Main page" src="images/back_arrow_white.png" />
+    </div>
+    <div id="home-btn-txt-container">
+      Windows Phone Development for People in a Hurry
+    </div>
+    </a>
+
+   </div>
+
+   <h1>
+
+    C# for People in a Hurry
+
+   </h1>
+
+  </div>
+
+
+  <div id="mainbody">
+
+
+  <h2>Overview</h2>
+
+   <p>
+    The following details some aspects of the C# programming language which may be unusual if you are not used to C++ style languages
+   </p>
+   <ul>
+    <li>
+     The following is the most basic C# file,
+     <pre><code>using System;
+using System.Net;
+// ... Other 'using' lines here ...
+
+namespace YourAppName
+{
+    public class MyClassName {
+        // ... Methods and properties here ...
+    }
+}</code></pre>
+    </li>
+    <li>
+     Everything you write in C# is inside a class (or struct which is basically a class with no methods), every class is inside a namespace
+    </li>
+    <li>
+     The following keywords are used often,
+     <ul class="compact">
+      <li>
+       <code>
+        this
+       </code>
+       is used to refer to the object instance inside a method. The object namespace is automatically imported into the method scope and so is used for clarity
+      </li>
+      <li>
+       <code>
+        base
+       </code>
+       is used to refer to a method or property on an inherited class. Inherited classes are specified as follows
+       <code>
+        public class MyClassName : InheritedClass1, InheritedClass2
+       </code>
+      </li>
+      <li>
+       <code>
+        new
+       </code>
+       instantiates a new class
+      </li>
+     </ul>
+    </li>
+    <li>
+     There are no functions or global variables in C#. Instead write a class using the
+     <code>
+      static
+     </code>
+     keyword which allows access to methods and properties of a class without instantiating it . e.g.
+     <pre><code>namespace YourAppName
+{
+    public static class MyClassName 
+    {
+        public static string MyStringProperty;
+
+        public static string MyStringMethod()
+        {
+            return "Hello";
+        }
+    }
+}</code></pre>
+     can be accessed elsewhere as
+     <code>
+      YourAppName.MyClassName.MyStringProperty
+     </code>
+     and
+     <code>
+      YourAppName.MyClassName.MyStringMethod()
+     </code>
+     .
+    </li>
+    <li>
+     Typical C# code makes frequent use of getters and setters. The syntax for this is as follows,
+     <pre><code>private string _myString;
+public string MyString 
+{
+    get 
+    {
+        return this._value;
+    }
+    set 
+    {
+        this._myString = value;
+    }
+}</code></pre>
+     the convention for private variables is to prefix with an underscore
+    </li>
+   </ul>
+   <h2>
+    Generics, Boxing/Unboxing and Interfaces
+   </h2>
+   <p>
+    C# is strongly typed. There are a few techniques which allow us to use and write code which can accept a wide range of objects
+   </p>
+   <ul>
+    <a name="generics">
+    </a>
+    <li>
+     Generics
+     <ul class="compact">
+      <li>
+       Allows the type to be specified when instantiating the object e.g.
+
+       <pre><code>List&lt;MyClassName&gt; myListOfClasses 
+    = new List&lt;MyClassName&gt;();</code></pre>
+
+       creates a new
+       <code>
+        List
+       </code>
+       object which contains 'MyClassName' objects
+      </li>
+     </ul>
+    </li>
+    <a name="boxing">
+    </a>
+    <li>
+     Boxing/Unboxing
+     <ul class="compact">
+      <li>
+       All C# objects inherit from
+       <code>
+        object
+       </code>
+      </li>
+      <li>
+       The technique where code accepts
+       <code>
+        object
+       </code>
+       as a type and then requires casting back into its true type later is known as Boxing/Unboxing
+      </li>
+      <li>
+       e.g. a typical event handler for a button click
+
+       <pre><code>private void cancelBtn_Click(Object sender,
+     EventArgs e) 
+{
+    Button b = sender as Button;
+    // ... more code here
+}</code></pre>
+
+       The sender is passed as an
+       <code>
+        object
+       </code>
+       but has to be cast back to a
+       <code>
+        Button
+       </code>
+       before we can access its properties and methods
+      </li>
+      <li>
+       Use the Visual Studio debugger to help determine an objects 'true' type
+      </li>
+     </ul>
+    </li>
+    <a name="interface">
+    </a>
+    <li>
+     Interfaces
+     <ul class="compact">
+      <li>
+       An interface in C# specifies a set of methods or properties that a class must implement to comply with that interface. Code can then be written that accepts the interface as a type and subsequently assumes that only these methods or properties exist.
+      </li>
+      <li>
+       e.g.
+       <code>
+        IEnumerable
+       </code>
+       is an interface. It requires
+       <code>
+        GetEnumerator()
+       </code>
+       to be defined in the class. If a class implements this interface then it can be used in any code that specifies
+       <code>
+        IEnumerable
+       </code>
+       as a type. If code accepts
+       <code>
+        IEnumerable
+       </code>
+       as a type then it can only assume that it has the
+       <code>
+        GetEnumerator()
+       </code>
+       method
+      </li>
+      <li>
+       In Windows Phone development we most commonly have to implement the
+       <a href="binding.html#converters">
+        <code>
+         IValueConverter
+        </code>
+       </a>
+       , the
+       <code>
+        INotifyPropertyChanged
+       </code>
+       and the
+       <code>
+        INotifyPropertyChanging
+       </code>
+       interfaces
+      </li>
+     </ul>
+    </li>
+   </ul>
+   <a name="misc">
+   </a>
+   <h2>
+    Miscellaneous tips
+   </h2>
+   <ul>
+    <li>
+     Object Initializers can initialise properties on instantiation without lots of tedious code in the constructor e.g.
+     <pre><code>Profile p = new Profile(){ 
+    Name = "Delia",
+    Occupation = "Chef",
+    FavouriteTeam = new Team() {
+        Name = "Norwich City",
+        LeaguePosition = 15
+    },
+    Age = null,
+};</code></pre>
+    </li>
+    <li>
+     To make a variable nullable (that isn't already e.g.
+     <code>
+      int
+     </code>
+     ,
+     <code>
+      bool
+     </code>
+     ) place a question mark after it i.e.
+     <code>
+      int? myNullableInteger;
+     </code>
+    </li>
+    <li>
+     To convert a string to a number use
+     <code>
+      Convert.ToDouble()
+     </code>
+     if you know it will work. If you are unsure use,
+
+     <pre><code>double num;
+bool wasSuccessful 
+    = double.TryParse(someString, out num);</code></pre>
+
+    </li>
+    <li>
+     Specifying
+     <code>
+      out
+     </code>
+     on a parameter means pass by reference, so the above will read the parsed number into
+     <code>
+      num
+     </code>
+    </li>
+   </ul>
+   <a name="linq">
+   </a>
+   <h2>
+    Linq
+   </h2>
+   <ul>
+    <li>
+     Linq is syntax that allows us to filter and manipulate collections of data such as
+     <a href="linqtosql.html">
+      <code>
+       EntitySet
+      </code>
+     </a>
+     objects and anything that implements the
+     <code>
+      IEnumerable
+     </code>
+     interface e.g.
+     <code>
+      List&lt;T&gt;
+     </code>
+     generics,
+
+     <pre><code>var profilesNamedDeliaQuery = from Profile p 
+    in myProfiles where p.Name == "Delia" 
+    select p</code></pre>
+
+    </li>
+    <li>
+     The result is filtered
+     <code>
+      IEnumerable
+     </code>
+     query which has not yet been resolved. To turn into a
+     <code>
+      List&lt;T&gt;
+     </code>
+     use,
+
+     <pre><code>List&lt;Profile&gt; profilesNamedDelia 
+    = profilesNamedDeliaQuery.ToList();</code></pre>
+
+    </li>
+    <li>
+     Since an unresolved query are returned this means complex queries can be built up without using lots of memory, e.g.
+     <pre><code>List&lt;string&gt; profileNamesWithNoOrders = 
+    ((from Profile p in myProfiles 
+    select p.Name).Except(from Order o 
+    in myOrders select o.ClientName)
+    ).ToList();</code></pre>
+     the query here is only converted to a
+     <code>
+      List&lt;string&gt;
+     </code>
+     once both of the internal Linq queries have completed
+    </li>
+    <li>
+     Windows Phone uses Linq-To-SQL which is a subset of full Linq
+    </li>
+    <li>
+     A good way to test and learn Linq queries is using the
+     <a href="tools.html#linqpad">
+      Linqpad tool
+     </a>
+    </li>
+   </ul>
+
+
+  </div>
+
+
+  <div id="footer">
+
+    <div id="backfooter">
+      <a href="xaml.html"><img alt="Previous page" src="images/back_arrow_teal.png" /> <span>Back</span></a>
+    </div>
+
+
+    <div id="nextfooter">
+      <a href="binding.html"><span>Next</span> <img alt="Next page" src="images/next_arrow_teal.png" /></a>
+    </div>
+
+  </div>
+
+
+ </body>
+</html>

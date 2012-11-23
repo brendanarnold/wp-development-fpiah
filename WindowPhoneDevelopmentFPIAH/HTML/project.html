@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html class="narrow">
+ <head>
+  <title>
+    
+   Windows Phone Solutions and Project files - Windows Phone Development For People In a Hurry
+
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="js/highlight.pack.js">
+  </script>
+  <script>
+hljs.initHighlightingOnLoad();
+
+// function fragNav(frag) {
+//     window.location.replace(frag);
+// }
+// function fragNav() {
+//     var els = document.URL.split("#");
+//     if (els.length == 1) {
+//         return;
+//     }
+//     var newurl = '#' + els[els.length - 1];
+//     window.location.replace(newurl);
+// }
+  </script>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <style type="text/css">
+
+div#header {
+    background: #A05000;
+}
+div#footer a {
+  color: #A05000;
+  text-decoration: none;
+}
+html.narrow code {
+    font-size: 90%;
+}
+
+  </style>
+ </head>
+ <body>
+
+
+  <div id="header">
+
+   <div id="home-btn">
+
+    <a href="index.html">
+    <div id="home-btn-img-container">
+      <img alt="Main page" src="images/back_arrow_white.png" />
+    </div>
+    <div id="home-btn-txt-container">
+      Windows Phone Development for People in a Hurry
+    </div>
+    </a>
+
+   </div>
+
+   <h1>
+
+    Solution and Project files for People in a Hurry
+
+   </h1>
+
+  </div>
+
+
+  <div id="mainbody">
+
+
+   <h2>
+    Solutions vs. Projects
+   </h2>
+   <ul>
+    <li>
+     A Windows Phone app is organised into a 'Solution' and 'Projects'
+    </li>
+    <li>
+     A Solution groups together Projects that are associated with your application
+    </li>
+    <li>
+     Usually you just have one project in your solution for the app itself, however there may be other projects, for example,
+     <ul class="compact">
+      <li>
+       unit tests
+      </li>
+      <li>
+       a desktop front-end
+      </li>
+      <li>
+       a web front-end
+      </li>
+      <li>
+       a separate library spun out of the main project
+      </li>
+     </ul>
+    </li>
+    <li>
+     A Window Phone project generates lots of files automatically, see
+     <a href="project.html">
+      Understanding  Windows Phone Project files
+     </a>
+     for a guide on what they do
+    </li>
+    <li>
+     <code>
+      .cproj
+     </code>
+     or
+     <code>
+      .vbproj
+     </code>
+     and
+     <code>
+      .sln
+     </code>
+     files are just XML. Take a look inside with a text editor to see that they mostly contain references to other files
+    </li>
+   </ul>
+   <h2>
+    Default skeleton project
+   </h2>
+   <p>
+    When creating a new Project a series of file are created as follows,
+   </p>
+   <ol class="tree">
+    <li>
+     <label class="folder" for="propertiesfolder">
+      Properties
+     </label>
+     <input checked="checked" id="propertiesfolder" type="checkbox"/>
+     <ol>
+      <li class="file">
+       <span>
+        AppManifest.xml
+       </span>
+      </li>
+      <li class="file">
+       <span>
+        AssemblyInfo.cs
+       </span>
+      </li>
+      <li class="file">
+       <span>
+        WMAppManifest.xml
+       </span>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <label class="folder" for="reffolder">
+      References
+     </label>
+     <input checked="checked" id="reffolder" type="checkbox"/>
+    </li>
+    <li>
+     <label class="xaml" for="appxaml">
+      App.xaml
+     </label>
+     <input id="appxaml" type="checkbox"/>
+     <ol>
+      <li class="file">
+       <span>
+        App.xaml.cs
+       </span>
+      </li>
+     </ol>
+    </li>
+    <li>
+     <label class="xaml" for="mainxaml">
+      MainPage.xaml
+     </label>
+     <input id="mainxaml" type="checkbox"/>
+     <ol>
+      <li class="file">
+       <span>
+        MainPage.xaml.cs
+       </span>
+      </li>
+     </ol>
+    </li>
+    <li class="file">
+     <span>
+      ApplicationIcon.png
+     </span>
+    </li>
+    <li class="file">
+     <span>
+      Background.png
+     </span>
+    </li>
+    <li class="file">
+     <span>
+      SplashScreenImage.png
+     </span>
+    </li>
+   </ol>
+   <h3>
+    Properties
+   </h3>
+   <ul>
+    <li>
+     Properties folder contains Windows Phone App metadata (i.e. data about the app itself such as version number)
+    </li>
+    <li>
+     Data in these files can be edited safely using the 'Project - YourAppName Properties' window in Visual Studio, otherwise these files can be mostly be left alone
+    </li>
+    <li>
+     AppManifest.xml contains a list of extra resource files to be included in the final built
+     <a class="glossaryterm" href="glossary.html#.xap">
+      <code>
+       .xap
+      </code>
+     </a>
+     package
+    </li>
+    <li>
+     AssemblyInfo.cs contains metadata for management of the
+     <a class="glossaryterm" href="glossary.html#.net">
+      .NET
+     </a>
+     <a class="glossaryterm" href="glossary.html#.dll">
+      <code>
+       .dll
+      </code>
+     </a>
+     that is compiled from the project such as
+     <code>
+      .dll
+     </code>
+     version number
+    </li>
+    <li>
+     WMAppManifest.xml contains,
+        <ul class="compact">
+            <li>a list of app capabilities (e.g. the app uses GPS, microphone, push notifications etc.)</li>
+            <li>the company name, version etc.</li>
+            <li>the reference for the first page loaded in your app (i.e. MainPage.xaml)</li>
+        </ul>
+    </li>
+   </ul>
+   <h3>
+    References
+   </h3>
+   <ul>
+    <li>
+     Contains references to libraries, see
+     <a href="vs.html#addinglibraries">
+      adding libraries to a project
+     </a>
+    </li>
+   </ul>
+   <h3>
+    Other files
+   </h3>
+   <ul>
+    <li>
+     App.xaml is the first xaml file loaded by the project when it runs. It does not display anything but is where global XAML styles and other resources are placed
+    </li>
+    <li>
+     App.xaml.cs contains the definition for the global
+     <code>
+      App
+     </code>
+     object. It is a good place to attach the
+     <a href="mvvm.html">
+      View-Model
+     </a>
+     instance.  Also provides the app <code>Launching</code>, <code>Closing</code>, <code>Activated</code> and <code>Deactivated</code> methods used for
+     <a href="lifecycle.html">
+      Lifecycle
+     </a>
+     management
+    </li>
+    <li>
+     MainPage.xaml is an ordinary Windows Phone XAML page. However it is referenced in WMAppManifest.xml to be the first page loaded when the app starts. When moving to the View folder, be sure to update the reference in WMAppManifest.xml
+    </li>
+   </ul>
+
+
+  </div>
+
+
+  <div id="footer">
+
+    <div id="backfooter">
+      <a href="tools.html"><img alt="Previous page" src="images/back_arrow_brown.png" /> <span>Back</span></a>
+    </div>
+
+
+    <div id="nextfooter">
+      <a href="skeleton.html"><span>Next</span> <img alt="Next page" src="images/next_arrow_brown.png" /></a>
+    </div>
+
+  </div>
+
+
+ </body>
+</html>
