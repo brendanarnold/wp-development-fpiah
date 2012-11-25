@@ -3,7 +3,7 @@
  <head>
   <title>
     
-   App Design - Windows Phone Development for People in a Hurry
+   Design and Layout - Windows Phone Development for People in a Hurry
 
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,7 +60,7 @@ html.narrow code {
 
    <h1>
 
-    App Design for People in a Hurry
+    Design and Layout for People in a Hurry
 
    </h1>
 
@@ -70,11 +70,8 @@ html.narrow code {
   <div id="mainbody">
 
 
-  <h2>General tips</h2>
+  <h2>Design</h2>
 
-   <p>
-    Best to use a Windows Phone to get a feel for the design, however here are some general tips,
-   </p>
    <ul>
     <li>
      Some icons for the application bar are built into Blend, but there are also a great set of Creative Commons icons at
@@ -91,9 +88,14 @@ html.narrow code {
     <li>
      Data is sacred, if any action will cause data to be deleted/lost then prompt the user
     </li>
+    <li>
+    Ultimately it is best to use a Windows Phone to get a feel for the design
+    </li>
   </ul>
 
-   <h2>Hub and Spoke navigation</h2>
+    <h2>Layout</h2>
+
+   <h3>Hub and Spoke model</h3>
 
   <ul>
       <li>
@@ -123,6 +125,44 @@ Below is the page layout for an example app. Arrows show where navigation button
 
       </li>
    </ul>
+
+<h3>Navigating between pages</h3>
+
+<ul>
+    <li>To navigate to another page, put the following in e.g. a button click event handler
+
+    <pre><code>NavigationService.Navigate(
+  new Uri("/View/ProfilePage.xaml",
+  UriKind.Relative));</code></pre>
+
+    </li>
+    <li>To pass data between pages use HTML style queries in the URI e.g.
+
+    <pre><code>NavigationService.Navigate(
+  new Uri(String.Format(
+  "/View/ProfilePage.xaml?Action={0}&Id={0}", 
+  action, id)));</code></pre>
+
+    </li>
+    <li>
+    To retrieve these queries, use,;
+
+<pre><code>string action
+NavigationContext.QueryString
+  .TryGetValue("Action", 
+  out action);</code></pre>
+
+    </li>
+    <li>To pass an object from one page to another either,
+        <ul class="compact">
+            <li>Save to a ViewModel property</li>
+            <li>If it is a database object with a unique id, send the id in the URI as above then retrieve the object via a <a href="csharp.html#linq">Linq query</a> on the new page</li>
+        </ul>
+    </li>
+</ul>
+
+
+
 
 
   </div>

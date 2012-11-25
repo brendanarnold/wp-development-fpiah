@@ -28,7 +28,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="43.136268"
+     inkscape:cx="366.38508"
      inkscape:cy="819.50964"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -155,29 +155,54 @@
          y="335.97336"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:1.59684789;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
     <rect
-       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:5.59015751;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-       id="rect3003-7-5"
-       width="133.43472"
-       height="133.43472"
-       x="333.30304"
-       y="208.83752"
-       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
+       inkscape:export-ydpi="112.1608"
        inkscape:export-xdpi="112.1608"
-       inkscape:export-ydpi="112.1608" />
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
+       y="199.74615"
+       x="278.75479"
+       height="133.43472"
+       width="133.43472"
+       id="rect2997"
+       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:5.59015751;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    <rect
+       style="fill:#292929;fill-opacity:1;stroke:#ffffff;stroke-width:12.06292915;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3003-7-5"
+       width="287.93707"
+       height="287.93707"
+       x="508.26535"
+       y="101.60641"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\AppIcon_300x300.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       inkscape:export-ydpi="112.1608"
+       inkscape:export-xdpi="112.1608"
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
+       sodipodi:linespacing="125%"
+       id="text2999"
+       y="246.6162"
+       x="287.63574"
+       style="font-size:44.1032486px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold"
+         y="246.6162"
+         x="287.63574"
+         id="tspan3001"
+         sodipodi:role="line">FPIAH</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:44.1032486px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
-       x="342.18399"
-       y="255.70757"
+       style="font-size:95.16983032px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:6.03146458;font-family:Segoe UI;-inkscape-font-specification:Segoe UI"
+       x="527.42944"
+       y="202.74664"
        id="text3773-4-4"
        sodipodi:linespacing="125%"
-       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\Background.png"
-       inkscape:export-xdpi="112.1608"
-       inkscape:export-ydpi="112.1608"><tspan
+       inkscape:export-filename="C:\Users\Brendan\Documents\Code\WindowsPhone\WindowPhoneDevelopmentFPIAH\WindowPhoneDevelopmentFPIAH\AppIcon_300x300.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan3775-0-1"
-         x="342.18399"
-         y="255.70757"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:2.79507875;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
+         x="527.42944"
+         y="202.74664"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;stroke:#ffffff;stroke-width:6.03146458;font-family:Segoe WP;-inkscape-font-specification:Segoe WP Bold">FPIAH</tspan></text>
   </g>
 </svg>

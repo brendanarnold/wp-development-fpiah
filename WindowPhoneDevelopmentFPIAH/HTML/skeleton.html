@@ -196,17 +196,17 @@ html.narrow code {
       </li>
       <li class="file">
        <span>
-        StorageInterface.cs
+        DataSourceInterface.cs
        </span>
       </li>
       <li class="file">
        <span>
-        StorageInitialiser.cs
+        DataSourceInitialiser.cs
        </span>
       </li>
       <li class="file">
        <span>
-        StorageMigrater.cs
+        DataSourceMigrater.cs
        </span>
       </li>
      </ol>
@@ -270,58 +270,11 @@ html.narrow code {
     </li>
    </ol>
    <h2>
-    View
+    View/Model/ViewModel
    </h2>
    <ul>
     <li>
-     All files in folder are under the 'YourAppName.View' namespace
-    </li>
-    <li>
-     Contains all XAML pages and their code-behind files apart from App.xaml
-    </li>
-    <li>
-     UserControls folder contains user controls
-    </li>
-    <li>
-     Converters.cs is a file that contains all the
-     <a href="binding.html#converters">
-      Converter classes
-     </a>
-    </li>
-   </ul>
-   <h2>
-    Model
-   </h2>
-   <ul>
-    <li>
-     All files in folder are under the 'YourAppName.Model' namespace
-    </li>
-    <li>
-     Includes files containing the classes for the objects retrieved from your <a class="glossaryterm" href="glossary.html#datasource">data source</a> e.g. Profile.cs and Order.cs
-    </li>
-    <li>
-     StorageInterface.cs is a class that implements the interface to the <a class="glossaryterm" href="glossary.html#datasource">data source</a> (n.b. this is the ToDoDataContext.cs file in the
-     <a href="http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh286405(v=vs.105).aspx">
-      Local database app with MVVM for Windows Phone tutorial
-     </a>
-     )
-    </li>
-    <li>
-     StorageInitialiser.cs contains a class and objects that populate the database, XML storage etc. on first use with e.g. Order templates. This should contain code that is run once on a fresh install.
-    </li>
-    <li>
-     StorageMigrater.cs contains code for updating the database or XML storage between different versions of the app so old data files can be updated to the current format. This is run once when the app is updated.
-    </li>
-   </ul>
-   <h2>
-    View-Model
-   </h2>
-   <ul>
-    <li>
-     All files are under the 'YourAppName.ViewModel' namespace
-    </li>
-    <li>
-     AppViewModel.cs implements a single AppViewModel class which loads the necessary data from the Model into its properties. These properties are mirrored automatically in the View
+    See <a href="mvvm.html">MVVM for People in a Hurry</a> for how to organise code into these directories
     </li>
    </ul>
    <h2>

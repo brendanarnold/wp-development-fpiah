@@ -100,10 +100,13 @@ html.narrow code {
    </h2>
    <ul>
     <li>
-     A good practice is to define the many XAML Bindings in a phone page by the property that they mirror. The object this property refers to is determined by the 'DataContext'
+     We define XAML Bindings in a phone page <em>only by the name</em> of the property that they mirror
     </li>
     <li>
-     We can therefore set the DataContext for the whole page which easily allows the bindings to refer to a fake View-Model object at design-time (i.e. when working in Blend) and the actual View-Model object at runtime. The bindings only know about the property names, they do not care if they are on different obect types
+    The DataContext determines which object these properties refer to
+    </li>
+    <li>
+     We can set the DataContext for the whole page to be a fake View-Model object at design-time (i.e. when working in Blend) and the actual View-Model object at runtime
     </li>
    </ul>
    <h3>

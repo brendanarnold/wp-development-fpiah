@@ -83,10 +83,7 @@ html.narrow code {
      <a class="glossaryterm" href="glossary.html#pattern">
       pattern
      </a>
-     , however you should follow it unless you have a good reason not to
-    </li>
-    <li>
-     It organises your code into three roles for your code,
+     , that organises your code into three roles,
      <ul class="compact">
       <li>
        'View' code deals with the user interface (UI)
@@ -108,7 +105,7 @@ html.narrow code {
    </h2>
    <ul>
     <li>
-     To save writing lots of code to read and write data to and from the View (UI), the View can 'bind' most XAML attributes to a property of a C# object.
+     Most XAML attributes in the View can be 'bound' to a property of a C# object.
     </li>
     <li>
      When the 'bound' C# property changes, this is automatically reflected in the View and (optionally) vice-versa
@@ -116,37 +113,25 @@ html.narrow code {
     <li>
      We write the View-Model object to be the bound object
     </li>
-    <li>
-     This structure allows most application logic to be concerned with making changes on the View-Model object in C# - the View automatically updates accordingly
-    </li>
-    <li>
-     We will examine how this is actually implemented in
-     <a href="binding.html">
-      Data binding for people in a hurry
-     </a>
-    </li>
    </ul>
    <div class="figure">
-    <img width="70%" height="70%" src="images/binding_figure.png" />
+    <img width="50%" height="50%" src="images/binding_figure.png" />
    </div>
    <h2>
     Benefits of MVVM
    </h2>
    <ul>
     <li>
-     Lots of the UI coding is taken care of
+     Lots of the coding necessary to synchronise the UI with the application state is taken care of
     </li>
     <li>
-     Expression Blend has tools to mock up a fake View-Model object with sample data so you can design the UI without a working C# backend
+     Expression Blend has tools to mock up a fake View-Model object with sample data so you can design the UI before you have a working C# backend
     </li>
     <li>
-     A de-coupled View makes substituting another View (e.g. web or desktop frontend) more straightforward
+     Binding is defined in the View only which means we can substitute another View (e.g. web or desktop frontend) relatively easily
     </li>
     <li>
-     Unit testing is easier since there is virtually no programming logic in the UI, the backend is pure C# and also the UI is not required for the app to compile and run
-    </li>
-    <li>
-     However, with only the free development tools, writing the getters/setters plus appropriate events all bound View-Model properties to get it to work is tedious
+     Minimal programming in the UI means easier unit testing
     </li>
    </ul>
    <h2>
@@ -157,12 +142,15 @@ html.narrow code {
     <a href="skeleton.html">
      skeleton project
     </a>
-    contains a directory for each of these roles. Files are organised into these directories depending on their role
+    contains a directory for each of these roles. Files are organised into each as follows,
    </p>
    <h3>
     View
    </h3>
    <ul>
+    <li>
+    Organised under the <code>YourAppName.View</code> namespace
+    </li>
     <li>
      Pages and UserControls (i.e. custom widgets) defined in XAML and their <a class="glossaryterm" href="glossary.html#codebehind">code behind files</a> (i.e. the .cs or .vb files that are linked to the .xaml file in the Visual Studio project explorer) belong in the View
     </li>
@@ -173,6 +161,9 @@ html.narrow code {
      If a button click does something that is not to do with the UI, for example save an object to a database, then the code-behind should immediately call a method on the View-Model
     </li>
     <li>
+    <a href="binding.html#converters">Converter classes</a> belong in the View
+    </li>
+    <li>
      It should be possible to remove the View code folder from the project and the application should still compile and run (albeit with no way to input or output data)
     </li>
    </ul>
@@ -181,16 +172,25 @@ html.narrow code {
    </h3>
    <ul>
     <li>
+    Organised under the <code>YourAppName.Model</code> namespace
+    </li>
+    <li>
      Code that implements the interface for the <a class="glossaryterm" href="glossary.html#datasource">data source</a> (e.g. database, XML files, webservice etc.) belongs in the Model
     </li>
     <li>
      However the actual calling of the interface should be done in the View-Model
     </li>
     <li>
-     The classes that contain the data from the <a class="glossaryterm" href="glossary.html#datasource">data source</a> e.g.  the 'Customer' class and the 'Invoice' class belong in the Model
+    Code that initialises and populates the data source on first use of the app belongs in the Model
+    </li>
+    <li>
+     The classes that contain the data from the <a class="glossaryterm" href="glossary.html#datasource">data source</a> e.g.  the 'Profile' class and the 'Order' class belong in the Model
     </li>
     <li>
      However, collections of these classes, for example to be displayed in a list in the View, should be in the View-Model
+    </li>
+    <li>
+    Code to 'migrate' (i.e. update) the storage between different versions of the application, e.g. to change the XAML or database schema, belong in the Model
     </li>
    </ul>
    <h3>
@@ -198,7 +198,10 @@ html.narrow code {
    </h3>
    <ul>
     <li>
-     The object that provides the properties for UI binding is the View-Model
+    Organised under the <code>YourAppName.ViewModel</code> namespace
+    </li>
+    <li>
+     The object that provides the properties for UI binding is the View-Model (call it <code>AppViewModel</code> to avoid name conflict with the namespace)
     </li>
     <li>
      Methods that takes the raw data from the Model and process it for the UI go in the View-Model class
