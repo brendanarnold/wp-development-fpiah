@@ -10,8 +10,7 @@
 	FontFamily="{StaticResource PhoneFontFamilyNormal}"
 	FontSize="{StaticResource PhoneFontSizeNormal}"
 	Foreground="{StaticResource PhoneForegroundBrush}"
-	Orientation="Portrait"
-	shell:SystemTray.IsVisible="True">
+	Orientation="Portrait">
 	<phone:PhoneApplicationPage.ApplicationBar>
 		<shell:ApplicationBar Mode="Minimized">
 			<shell:ApplicationBar.MenuItems>

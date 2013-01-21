@@ -20,9 +20,9 @@
     		<TextBlock TextWrapping="Wrap" Text="Windows Phone Development for People in a Hurry" FontSize="48" FontFamily="Segoe WP SemiLight" Margin="10" VerticalAlignment="Top"/>
     		<TextBlock TextWrapping="Wrap" Text="This is an offline version optimised for mobile viewing" Margin="10" FontSize="24"/>
     		<TextBlock TextWrapping="Wrap" Text="Note" FontWeight="Bold" FontSize="24" Margin="10,0,0,0"/>
-    		<TextBlock TextWrapping="Wrap" Text="Some external content requires an internet connection. It is recommended to download an offline YouTube viewer (such as 'Tube Download') and search for 'Corrina Black Blend' to download this video" Margin="10" FontSize="24"/>
+    		<TextBlock TextWrapping="Wrap" Margin="10" FontSize="24"><Run Text="Some external content requires an internet connection. "/><Run Text="To save for later viewing, d"/><Run Text="ownload an offline YouTube viewer "/><Run Text="app "/><Run Text="(such as 'Tube Download') and search for 'Corrina Black Blend'"/></TextBlock>
     		<Button x:Name="goToGuideBtn" Click="goToGuideBtn_Click" VerticalAlignment="Top" Content="go to guides"/>
-    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="24" Margin="10,10,0,0"><Run Text="Please direct and feedback to"/></TextBlock>
+    		<TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" FontSize="24" Margin="10,10,0,0"><Run Text="Please direct an"/><Run Text="y"/><Run Text=" feedback to"/></TextBlock>
 			<HyperlinkButton x:Name="emailBtn" Content="brendanarnold@outlook.com" HorizontalAlignment="Left" Tap="emailBtn_Tap"/>    		
     	</StackPanel>
     </Grid>
